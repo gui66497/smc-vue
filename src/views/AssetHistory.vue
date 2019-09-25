@@ -9,12 +9,12 @@
       <el-table-column
               prop="ip"
               label="IP"
-              width="180">
+              width="125">
       </el-table-column>
       <el-table-column
               prop="macAddress"
               label="Mac地址"
-              width="180">
+              width="146">
       </el-table-column>
       <el-table-column
               prop="detail"
@@ -23,9 +23,9 @@
       <el-table-column
               prop="createTime"
               label="创建时间"
-              width="180">
+              width="150">
       </el-table-column>
-      <el-table-column label="操作" width="200">
+      <el-table-column label="操作" width="160">
         <template slot-scope="scope">
           <el-button
                   size="mini"

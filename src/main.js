@@ -17,6 +17,9 @@ Vue.prototype.$http = http;
 // mock数据
 require('./mock/mock')
 
+import ElTreeSelect from 'el-tree-select';
+Vue.use(ElTreeSelect);
+
 router.beforeEach((to, from, next) => {
   //用你的方式获取登录的用户信息
   const token = localStorage.token

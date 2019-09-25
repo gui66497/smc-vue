@@ -8,6 +8,9 @@ import HelloWorld from './components/HelloWorld.vue'
 import Devops from './views/NavMenu/DevopsView.vue'
 import TopoManage from './views/TopoManage.vue'
 import AssetHistory from './views/AssetHistory.vue'
+import IframeGateway from './views/IframeGateway.vue'
+import StrategyManage from './views/NavMenu/StrategyManage.vue'
+import Report from './views/NavMenu/Report'
 
 Vue.use(Router)
 
@@ -47,6 +50,28 @@ export default new Router({
       ]
     },
     {
+      path: '/strategy',
+      name: 'strategy',
+      component: StrategyManage,
+      children: [
+        {
+          path: 'iframeGateway/:name',
+          component: IframeGateway
+        }
+      ]
+    },
+    {
+      path: '/report',
+      name: 'report',
+      component: Report,
+      children: [
+        {
+          path: 'iframeGateway/:name',
+          component: IframeGateway
+        }
+      ]
+    },
+    {
       path: '/login',
       name: 'login',
       component: () => import('@/views/login/index'),
@@ -81,6 +106,10 @@ export default new Router({
         {
           path: 'assetHistory',
           component: AssetHistory
+        },
+        {
+          path: 'iframeGateway/:name',
+          component: IframeGateway
         }
       ]
     }
